@@ -1,0 +1,16 @@
+description "Demonstrates terminal gui building, layouts, menus, serialization, high performance event loop, etc.\377";
+
+uses
+	CtrlLib,
+	Terminal,
+	PtyProcess;
+
+file
+	TerminalLayoutExample.h,
+	main.cpp,
+	TerminalLayoutExample.lay;
+
+mainconfig
+	"" = "GUI",
+	"" = "GUI WIN10";
+

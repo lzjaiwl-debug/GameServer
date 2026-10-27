@@ -1,0 +1,16 @@
+LAYOUT(AdminCertificationLayout, 368, 316)
+	ITEM(Upp::EditString, name, HSizePosZ(88, 140).VSizePosZ(16, 281))
+	ITEM(Upp::Label, dv___1, SetLabel(t_("用户名：")).HSizePosZ(40, 284).VSizePosZ(16, 281))
+	ITEM(Upp::EditString, pwd, HSizePosZ(88, 140).VSizePosZ(40, 257))
+	ITEM(Upp::Label, dv___3, SetLabel(t_("密   码：")).HSizePosZ(40, 284).VSizePosZ(40, 257))
+	ITEM(Upp::EditString, c_code, HSizePosZ(88, 140).VSizePosZ(88, 209))
+	ITEM(Upp::Label, dv___5, SetLabel(t_("挑战码：")).HSizePosZ(40, 284).VSizePosZ(88, 209))
+	ITEM(Upp::EditString, c_val, HSizePosZ(88, 140).VSizePosZ(112, 185))
+	ITEM(Upp::Label, dv___7, SetLabel(t_("挑战值：")).HSizePosZ(40, 284).VSizePosZ(112, 185))
+	ITEM(Upp::DropList, u_list, HSizePosZ(88, 140).VSizePosZ(64, 233))
+	ITEM(Upp::Label, dv___9, SetLabel(t_("U    盘：")).HSizePosZ(40, 284).VSizePosZ(64, 233))
+	ITEM(Upp::Button, create, SetLabel(t_("生成")).HSizePosZ(244, 48).VSizePosZ(36, 212))
+	ITEM(Upp::LabelBox, dv___11, SetLabel(t_("登录码")).LeftPosZ(0, 368).TopPosZ(144, 172))
+	ITEM(Upp::TerminalCtrl, linetxt, HSizePosZ(4, 4).VSizePosZ(160, 4))
+END_LAYOUT
+

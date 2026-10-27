@@ -1,0 +1,28 @@
+description "TheIDE - code browser and Topic++\377B";
+
+uses
+	PdfDraw,
+	RichEdit,
+	plugin/lz4,
+	ide/Common;
+
+file
+	Browser.h options(BUILDER_OPTION) PCH,
+	CodeBase readonly separator,
+	Util.cpp,
+	Browser.iml,
+	Topic readonly separator,
+	TopicBase.cpp,
+	File.cpp,
+	Topic.cpp,
+	Template.cpp,
+	Link.cpp,
+	TopicWin.cpp,
+	Move.cpp,
+	CodeRef.cpp,
+	TopicI.cpp,
+	Topic.lay,
+	Topic.iml,
+	Info readonly separator,
+	Copying;
+

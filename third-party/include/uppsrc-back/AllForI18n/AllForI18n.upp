@@ -1,0 +1,42 @@
+description "This package serves to gather all sources for language localisation\377";
+
+uses
+	CtrlLib,
+	ide,
+	PostgreSQL,
+	RichEdit,
+	MySql,
+	GridCtrl,
+	Oracle,
+	SqlCtrl,
+	plugin/bmp,
+	plugin/bz2,
+	plugin/dbf,
+	plugin/DroidFonts,
+	plugin/ftp,
+	plugin/FT_fontsys,
+	plugin/gif,
+	plugin/glew,
+	plugin/jpg,
+	plugin/lz4,
+	plugin/lzma,
+	plugin/ndisasm,
+	plugin/pcre,
+	plugin/pcx,
+	plugin/png,
+	plugin/ppm,
+	plugin/sqlite3,
+	plugin/tif,
+	plugin/z,
+	plugin/zip,
+	Core/POP3,
+	Core/Rpc,
+	Core/SMTP,
+	Core/SSL;
+
+file
+	main.cpp;
+
+mainconfig
+	"" = "GUI";
+

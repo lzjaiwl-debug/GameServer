@@ -1,0 +1,28 @@
+# Line ending normalization (project has Windows / Linux / macOS CMake presets)
+* text=auto
+
+# Visual Studio / MSVC files must keep CRLF in the working tree
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+*.vcxproj.filters text eol=crlf
+*.props text eol=crlf
+*.targets text eol=crlf
+*.rc text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Shell scripts must keep LF
+*.sh text eol=lf
+
+# Binary files - never touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.bmp binary
+*.lib binary
+*.dll binary
+*.pdb binary
+*.zip binary
+*.gz binary

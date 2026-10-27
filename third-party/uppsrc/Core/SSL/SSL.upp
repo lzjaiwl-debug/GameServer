@@ -1,0 +1,20 @@
+description "OpenSSL based SSL support for Core\3770,128,128";
+
+library(!OSX) "crypto ssl";
+
+library(WIN32) "usp10 gdi32 crypt32";
+
+library(OSX) "libcrypto.a libssl.a";
+
+file
+	SSL.h,
+	Util.cpp,
+	InitExit.cpp,
+	Socket.cpp,
+	P7S.cpp,
+	AES.cpp,
+	Buffer.hpp,
+	SSL.icpp,
+	Docs readonly separator,
+	src.tpp;
+

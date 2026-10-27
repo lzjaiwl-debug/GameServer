@@ -1,0 +1,46 @@
+ServerConfigSigner 使用说明
+============================
+
+目标
+----
+将明文 JSON 配置文件加密签发为 AccountServer 可读取的授权配置文件。
+签发时会绑定目标机器硬件序列号；在非授权机器上解密会失败，AccountServer 将拒绝启动。
+
+公共 API
+--------
+公共接口文件：include/AssetLibrary/ServerConfigLicense.hpp
+- 不依赖 U++ 类型（使用 std::string / std::string_view）
+- 支持 Windows 与 Linux
+- 提供硬件码、硬件序列号、签发加密、解密还原等接口
+
+生成规则
+--------
+1. 机器硬件码由程序读取系统硬件信息生成。
+2. 硬件序列号 = SHA-256(硬件码) 的十六进制大写字符串。
+3. 配置签发文件使用 AES-256-GCM 加密，并与硬件序列号绑定。
+
+命令行模式
+----------
+ServerConfigSigner --serial <硬件序列号> --input <json文件路径> [--output <输出路径>]
+
+示例：
+ServerConfigSigner --serial 0123ABCD... --input D:\cfg\AccountServer.json --output D:\deploy\AccountServer.config
+
+交互模式
+--------
+直接运行：
+ServerConfigSigner
+
+按提示输入：
+- 目标硬件序列号
+- 待签发 JSON 文件路径
+- 输出配置文件路径（默认 AccountServer.config）
+
+部署到 AccountServer
+---------------------
+1. 将签发后的文件命名为 AccountServer.config（或保持输出路径一致）
+2. 放到 AccountServer 可执行文件目录
+3. AccountServer 启动时会自动：
+   - 读取本机硬件码并生成硬件序列号
+   - 尝试解密 AccountServer.config
+   - 解密并还原为 JSON 成功才继续启动

@@ -1,0 +1,34 @@
+description "TheIDE - common library\377B";
+
+uses
+	Esc,
+	plugin/bz2,
+	plugin/lzma,
+	plugin/lz4,
+	plugin/zstd;
+
+file
+	Core.h options(BUILDER_OPTION) PCH,
+	Ide.cpp,
+	Cache.cpp,
+	Core.cpp,
+	Util.cpp,
+	Builder.cpp,
+	PPinfo.cpp,
+	Assembly.cpp,
+	Package.cpp,
+	Workspace.cpp,
+	usc.cpp,
+	BinObj.cpp,
+	Signature.cpp,
+	Host readonly separator,
+	Host.h,
+	Host.cpp,
+	Logger readonly separator,
+	Logger.cpp,
+	Logger.h,
+	Info readonly separator,
+	Copying,
+	Documentation readonly separator,
+	src.tpp;
+

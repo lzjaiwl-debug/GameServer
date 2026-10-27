@@ -1,0 +1,4 @@
+TODO:
+-----
+- Refactor SshChannel (at least getters and putters)
+- Write a tutorial based on SshBasics example.

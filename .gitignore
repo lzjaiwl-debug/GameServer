@@ -66,3 +66,29 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# --- Visual Studio ---
+.vs/
+*.VC.db
+*.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.idb
+*.tlog
+*.lastbuildstate
+*.exp
+*.aps
+ipch/
+Browse.VC*
+
+# --- CMake / Visual Studio build output ---
+out/
+cmake-build-*/
+CMakeUserPresets.json
+
+# --- Runtime state ---
+session-state/
